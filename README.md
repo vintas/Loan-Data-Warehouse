@@ -134,3 +134,5 @@ GO
 
 ```
 
+2. Run Create_Lineage_Table.sql to create Incremental Loads and Lineage table.
+

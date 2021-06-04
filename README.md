@@ -116,7 +116,7 @@ Fact_AccountMetrics
 - Current Account Balance
 - Has a Loan / No Loans
 - Number of Loans
-- Customer Key
+- Account Key
 - Date Key
 
 # Steps to set up our BankOne Data Warehouse:

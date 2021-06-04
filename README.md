@@ -101,14 +101,18 @@ Fact_Loans
 - Interest Rate
 - Loan Repayment Sequence number
 - Loan Repayment Amount
+- Account Credit Score [max(Customer credit Scores) - Other customer penalties]
 - Loan Key
 - Account key
 - Date key
 - Branch Key
-- Account Credit Score [max(Customer credit Scores) - Other customer penalties]
 
 Fact_CustomerMetrics
 - Credit Score
+- Customer Key
+- Date Key
+
+Fact_AccountMetrics
 - Current Account Balance
 - Has a Loan / No Loans
 - Number of Loans

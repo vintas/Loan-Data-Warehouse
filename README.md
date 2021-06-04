@@ -48,15 +48,6 @@ Dim_Date
 - First Date Of Week
 - Last Date Of Week
 
-Fact_Loans
-- Interest Rate
-- Loan Repayment Sequence number
-- Loan Repayment Amount
-- Loan Key
-- Account key
-- Date key
-- Branch Key
-- Account Credit Score
 
 Dim_Loans
 - Loan Key
@@ -105,6 +96,24 @@ Dim_Branch
 - City
 - State
 - Country
+
+Fact_Loans
+- Interest Rate
+- Loan Repayment Sequence number
+- Loan Repayment Amount
+- Loan Key
+- Account key
+- Date key
+- Branch Key
+- Account Credit Score [max(Customer credit Scores) - Other customer penalties]
+
+Fact_CustomerMetrics
+- Credit Score
+- Current Account Balance
+- Has a Loan / No Loans
+- Number of Loans
+- Customer Key
+- Date Key
 
 # Steps to set up our BankOne Data Warehouse:
 

@@ -77,7 +77,7 @@ Bridge_Customer[Because it is slightly ragged]
 - Account_Key
 - Customer 1
 - Customer 2
-- Relationship with customer 2
+- Relationship with customer 2 
     - It is non standard to put this in a bridge table but we do not see any other appropriate place and this information may be useful at some point.
 
 We do not not feel any weighing factor is appropriate here as joint accounts usually don't have any such factors involved. The corporates that have such a factor(due to share ownership distribution) don't make a joint account but have the name of their LLC as the customer name for their corporate account.
@@ -136,3 +136,8 @@ GO
 
 2. Run Create_Lineage_Table.sql to create Incremental Loads and Lineage table.
 
+3. Create Date Dimension table
+    1. First run Create_Date_Dimension_schema.sql to create the date dimension table schema.
+    2. The script Create_StoredProcedure_to_Generate_Dates.sql generates all the dates between 2000-01-01 and 2025-12-31 as a Stored Procedure[SP]. Execute it.
+        - It has the information on some of the holidays hardcoded but some are not as they vary by the year(eg., date of Diwali) and will need to be updated manually for each year.
+    3. Run the SP using Populate_Date_Dimension_table.sql

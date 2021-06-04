@@ -106,36 +106,31 @@ Dim_Branch
 - State
 - Country
 
-Dim_Date
-- Date Key
-- Date
-- Day
-- Day Suffix
-- Weekday
-- Weekday Name
-- Weekday Name Short
-- Weekday Name FirstLetter
-- Day Of Year
-- Week Of Month
-- Week Of Year
-- Month
-- Month Name
-- Month Name Short
-- Month Name FirstLetter
-- Quarter
-- Quarter Name
-- Year
-- MMYYYY
-- Month Year
-- Is Weekend
-- Is Holiday
-- Holiday Name
-- Special Day
-- First Date Of Year
-- Last Date Of Year
-- First Date Of Quater
-- Last Date Of Quater
-- First Date Of Month
-- Last Date Of Month
-- First Date Of Week
-- Last Date Of Week
+# Steps to set up our BankOne Data Warehouse:
+
+1. Create a database in MS SQL server called "BankOne_DW".
+```sql
+USE [master]
+GO
+DROP DATABASE IF EXISTS [BankOne_DW]
+GO
+CREATE DATABASE [BankOne_DW]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+
+***********/
+( NAME = N'BankOne_DW', FILENAME = N'{Local_Path}\BankOne_DW.mdf' , SIZE = 1581056KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'BankOne_DW_log', FILENAME = N'{Local_Path}\BankOne_DW_log.ldf' , SIZE = 7610368KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+GO
+ALTER DATABASE [BankOne_DW] SET COMPATIBILITY_LEVEL = 140
+GO
+
+USE [BankOne_DW]
+GO
+
+CREATE SCHEMA [int]
+GO
+
+```
+

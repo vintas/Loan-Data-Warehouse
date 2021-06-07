@@ -54,6 +54,7 @@ Dim_Loans
 - Floating/Fixed Interest Rate
 - Type_of_Loan[Educational/Housing/Automobile/Personal/Corporate]
 - Loan Duration[Total Number of Payments]
+- Loan Issue date
 - Loan Principal Amount
 - Non performing Asset/ Performing Asset
 - valid from Non Performing Asset[DATE]

@@ -75,7 +75,7 @@ We do not not feel any weighing factor is appropriate here as joint accounts usu
 
 Dim_Customer
 - Customer ID
-- Name
+- _Source Key
 - Age
 - Gender
 - Credit Score
@@ -92,7 +92,7 @@ Dim_Branch
 - Branch Location
 - Number of Employees
 - Number of Customers
-- Branch Type: Personal vs Corporate
+- Branch Type: Personal vs Corporate vs Rural
 - City
 - State
 - Country
@@ -149,8 +149,11 @@ GO
 
 2. Run `Create_Lineage_Table.sql` to create Incremental Loads and Lineage table.
 
-3. Create Date Dimension table
+3. Create Date Dimension table and populate it.
     1. First run `Create_Date_Dimension_schema.sql` to create the date dimension table schema.
     2. The script `Create_StoredProcedure_to_Generate_Dates.sql` generates all the dates between 2000-01-01 and 2025-12-31 as a Stored Procedure[SP]. Execute it.
         - It has the information on some of the holidays hardcoded but some are not as they vary by the year(eg., date of Diwali) and will need to be updated manually for each year.
     3. Run the SP using `Populate_Date_Dimension_table.sql`
+4. Create Customer Dimension Table using `Create_Dim_Customer_schema.sql`
+5. Add Customer Dimension to lineage. Change the lineage value in Excel to 2 and then populate it using `Populate_Customer_Dimension_table.sql` that is derived from `Dimension Tables\Dim_Customer.xlsx`
+6. 

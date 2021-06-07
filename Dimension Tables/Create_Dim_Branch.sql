@@ -7,5 +7,6 @@ CREATE TABLE [dbo].[Dim_Branch] (
 	[Branch Type] NVARCHAR(10),
 	[City] NVARCHAR(20),
 	[STATE] NVARCHAR(20),
-	[COUNTRY] NVARCHAR(20)
+	[COUNTRY] NVARCHAR(20),
+	[Lineage Key] INT
 )

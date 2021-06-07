@@ -3,5 +3,6 @@ CREATE TABLE [dbo].[Dim_Loans](
 	[Interest Rate] FLOAT,
 	[Type of Loan] NVARCHAR(10),
 	[Loan Duration] INT,
-	[Loan Principal Amount] FLOAT
+	[Loan Principal Amount] FLOAT,
+	[Lineage Key] INT
 )

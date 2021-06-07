@@ -159,3 +159,6 @@ GO
 5. Add Customer Dimension to lineage. Change the lineage value in Excel to 2 and then populate it using `Populate_Customer_Dimension_table.sql` that is derived from `Dimension Tables\Dim_Customer.xlsx`
 6. Run `Dimension Tables\Create_Dim_Branch.sql` to create branch dimension table and populate it using `Populate_Branch_Dimension_table.sql` derived from `Dummy Data\Dim_Branch.xlsx`. Use only 20 branches.
 7. Run `Dimension Tables\Create_Dim_Loans.sql` to create the schema for Loan dimension table and then run `Populate_Loans_Dimension_table.sql` to populate it based on `Dummy Data\Dim_Loans.xlsx`. Use only 60 loans.
+<!-- //TODO -->
+8. Accounts table. 
+9. Run `Create_Fact_Loans_schema.sql` to create the loans fact table schema and then run `generate_fact_loans.py` by typing `python .\generate_fact_loans.py | Out-File -FilePath D:\populate_fact_sales.sql` to get sql queries to populate the loans fact table as well as update the loans table with appropriate values. Note that there is a dependency to `dateutil`. If not installed, install it with `pip install python-dateutil`

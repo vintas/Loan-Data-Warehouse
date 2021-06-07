@@ -156,4 +156,4 @@ GO
     3. Run the SP using `Populate_Date_Dimension_table.sql`
 4. Create Customer Dimension Table using `Create_Dim_Customer_schema.sql`
 5. Add Customer Dimension to lineage. Change the lineage value in Excel to 2 and then populate it using `Populate_Customer_Dimension_table.sql` that is derived from `Dimension Tables\Dim_Customer.xlsx`
-6. 
+6. Run `Dimension Tables\Create_Dim_Branch.sql` to create branch dimension table and populate it using `Populate_Branch_Dimension_table.sql` derived from `Dummy Data\Dim_Branch.xlsx`. Use only 20 branches.

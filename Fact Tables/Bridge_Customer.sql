@@ -1,4 +1,4 @@
-CREATE TABLE [dbo].[Fact_Account_Metrics](
+CREATE TABLE [dbo].[Bridge_Customer](
 	[Account Key] [bigint] IDENTITY(1,1) NOT NULL,
 	[Customer 1 Key] [int] NOT NULL,
     [Customer 2 Key] [int] NOT NULL,

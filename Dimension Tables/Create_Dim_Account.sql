@@ -1,7 +1,14 @@
+USE [BankOne_DW]
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
 CREATE TABLE [dbo].[Dim_Account](
-	[Account Key] INT NOT NULL PRIMARY KEY,
-	[Source Key] NVARCHAR(10) NOT NULL,
-	[Account Open Date] INT NOT NULL,
-	[Account Type] NVARCHAR(10) NOT NULL,
+	[Account Key] INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	[_Source Key] NVARCHAR(50) NOT NULL,
+	[Account Open Date] DATE NOT NULL,
+	[Account Type] NVARCHAR(50) NOT NULL,
 	[Lineage Key] INT NOT NULL
 )

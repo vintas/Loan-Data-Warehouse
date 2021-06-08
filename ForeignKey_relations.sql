@@ -34,5 +34,24 @@ ALTER TABLE [dbo].[Bridge_Customer]
 ADD CONSTRAINT FK_BridgeCustomer_customer2_key
 FOREIGN KEY ([Customer 2 Key]) REFERENCES [dbo].[Dim_Customer]([Customer Key]); 
 
+--Fact_Account_Metrics to Account
+ALTER TABLE [dbo].[Fact_Account_Metrics]
+ADD CONSTRAINT FK_AccountMetrics_account_key
+FOREIGN KEY ([Account Key]) REFERENCES [dbo].[Dim_Account]([Account Key]); 
+
+--Fact_Account_Metrics to Date
+ALTER TABLE [dbo].[Fact_Account_Metrics]
+ADD CONSTRAINT FK_AccountMetrics_date_key
+FOREIGN KEY ([Date Key]) REFERENCES [dbo].[Dim_Date]([Date Key]); 
+
+--Fact_Customer_Metrics to Customer
+ALTER TABLE [dbo].[Fact_Customer_Metrics]
+ADD CONSTRAINT FK_CustomerMetrics_customer_key
+FOREIGN KEY ([Customer Key]) REFERENCES [dbo].[Dim_Customer]([Customer Key]); 
+
+--Fact_Customer_Metrics to Date
+ALTER TABLE [dbo].[Fact_Customer_Metrics]
+ADD CONSTRAINT FK_CustomerMetrics_date_key
+FOREIGN KEY ([Date Key]) REFERENCES [dbo].[Dim_Date]([Date Key]); 
 
 

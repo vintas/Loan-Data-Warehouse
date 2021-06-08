@@ -162,4 +162,5 @@ GO
 9. Run `Dimension Tables\Create_Dim_Account.sql` to create the schema for Account dimension table and then run `Populate_Account_Dimension_table.sql` to populate it based on `Dummy Data\Dim_Account.xlsx`.
 10. Run `Fact Tables\Bridge_Customer.sql` to create the schema for Customers_Bridge table and then run `Populate_Accounts_Customer_Bridge_table.sql` to populate it based on `Dummy Data\Bridge_Customer.xlsx`.
 11. Run `Create_Fact_Loans_schema.sql` to create the loans fact table schema and then run `generate_fact_loans.py` by typing `python .\generate_fact_loans.py | Out-File -FilePath D:\populate_fact_sales.sql` to get sql queries to populate the loans fact table as well as update the loans table with appropriate values. Note that there is a dependency to `dateutil`. If not installed, install it with `pip install python-dateutil`. Add lineage.
-12. Run `ForeignKey_relations.sql` to add the foreign key constraints.
+12. Run `Populate_Account_Metrics_Fact_table.sql` based on `Dummy Data\Fact_Account_Metrics.xlsx`
+13. Run `ForeignKey_relations.sql` to add the foreign key constraints.

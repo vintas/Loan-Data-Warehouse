@@ -159,6 +159,6 @@ GO
 6. Create Customer Dimension Table using `Create_Dim_Customer_schema.sql`
 7. Populate the Customer dimension table using `Populate_Customer_Dimension_table.sql` that is derived from `Dimension Tables\Dim_Customer.xlsx`.
 8. Run `Dimension Tables\Create_Dim_Loans.sql` to create the schema for Loan dimension table and then run `Populate_Loans_Dimension_table.sql` to populate it based on `Dummy Data\Dim_Loans.xlsx`. Use only 60 loans. Add lineage.
-<!-- //TODO -->
 9. Run `Dimension Tables\Create_Dim_Account.sql` to create the schema for Account dimension table and then run `Populate_Account_Dimension_table.sql` to populate it based on `Dummy Data\Dim_Account.xlsx`.
-10. Run `Create_Fact_Loans_schema.sql` to create the loans fact table schema and then run `generate_fact_loans.py` by typing `python .\generate_fact_loans.py | Out-File -FilePath D:\populate_fact_sales.sql` to get sql queries to populate the loans fact table as well as update the loans table with appropriate values. Note that there is a dependency to `dateutil`. If not installed, install it with `pip install python-dateutil`. Add lineage.
+10. Run `Fact Tables\Bridge_Customer.sql` to create the schema for Customers_Bridge table and then run `Populate_Accounts_Customer_Bridge_table.sql` to populate it based on `Dummy Data\Bridge_Customer.xlsx`.
+11. Run `Create_Fact_Loans_schema.sql` to create the loans fact table schema and then run `generate_fact_loans.py` by typing `python .\generate_fact_loans.py | Out-File -FilePath D:\populate_fact_sales.sql` to get sql queries to populate the loans fact table as well as update the loans table with appropriate values. Note that there is a dependency to `dateutil`. If not installed, install it with `pip install python-dateutil`. Add lineage.

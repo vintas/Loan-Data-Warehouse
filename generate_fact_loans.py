@@ -102,7 +102,7 @@ for loan_number, date_tuple in enumerate(issue_date_list):
         repayment_date = datetime.datetime.strftime(use_date,'%Y%m%d')
         # print(loan_number, "#", repayment_date)
         if i == 0:
-            print('''INSERT into [dbo].[Fact_Loans] ([Loan Key], [Account Key], [Date Key], [Branch Key], [Interest Rate], [Loan Repayment Sequence Number],[Loan Repayment Amount]) VALUES ('''
+            print('''INSERT into [dbo].[Fact_Loans] ([Loan Key], [Account Key], [Date Key], [Branch Key], [Interest Rate], [Loan Repayment Sequence Number],[Loan Repayment Amount], [Lineage Key]) VALUES ('''
             + str(loan_number+1) + ''','''
             + str(loan_number+1) + ''','''
             + str(repayment_date) + ''','''
@@ -110,9 +110,10 @@ for loan_number, date_tuple in enumerate(issue_date_list):
             + str(interest_rate) + ''','''
             + str(i) + ''','''
             + str(0)
+            + ''',7'''
             +''');''')
         else:
-            print('''INSERT into [dbo].[Fact_Loans] ([Loan Key], [Account Key], [Date Key], [Branch Key], [Interest Rate], [Loan Repayment Sequence Number],[Loan Repayment Amount]) VALUES ('''
+            print('''INSERT into [dbo].[Fact_Loans] ([Loan Key], [Account Key], [Date Key], [Branch Key], [Interest Rate], [Loan Repayment Sequence Number],[Loan Repayment Amount], [Lineage Key]) VALUES ('''
             + str(loan_number+1) + ''','''
             + str(loan_number+1) + ''','''
             + str(repayment_date) + ''','''
@@ -120,6 +121,7 @@ for loan_number, date_tuple in enumerate(issue_date_list):
             + str(interest_rate) + ''','''
             + str(i) + ''','''
             + str(round((loan_principal_amount/loan_total_months)*(1+interest_rate/100),2))
+            + ''',7'''
             +''');''')
 
 
